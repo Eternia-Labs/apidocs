@@ -1,3 +1,11 @@
+---
+layout: default
+title: Grids
+has_children: false
+has_toc: true
+nav_order: 2
+---
+
 # Smartclean / SCGrids v1.0
 
 ## Grids module includes the APIs for smartclean Property, Building, Level, Zone (installations / locations). The hierarchy is as follows 
