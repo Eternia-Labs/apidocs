@@ -35,3 +35,5 @@ The op `scattendance.readIntegration` returns integration details for a given in
     "Created": 1631151741
 }
 ```
+
+The _UserMap_ must have been configured and maintained before the data for a given source seat id (_SourceId_) can be sent and processed.
