@@ -10,10 +10,28 @@ nav_order: 2
 
 The op `scattendance.readIntegration` returns integration details for a given integration id created by a property.
 
-## Input Body
+## API details
+### Input JSON
 
 ```
 {
-    "IntegrationId": "OCBCAttendanceIntegration"
+    "IntegrationId": "<The integration id>"
+}
+```
+
+### Output JSON
+
+```
+{
+    "Org": "<org>",
+    "IntegrationId": "<The integration id>",
+    "DefaultPID": "<The default building id to be used if _scnoop_ was sent as _pid_>",
+    "ID": "<The property id>",
+    "UserMap": {
+        "SourceId": "SinkId"
+    },
+    "Description": "Attendance system integration example.",
+    "Updated": 1631151741,
+    "Created": 1631151741
 }
 ```
