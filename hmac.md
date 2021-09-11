@@ -1,13 +1,14 @@
 ---
 layout: default
 title: HMAC Signing
+has_children: true
 has_toc: true
 nav_order: 2
 ---
 
 # SmartClean HMAC Signature Version 1
 
-The _Authorization_ header must contain the following values:
+The _Authorization_ header must contain a string with format as shown below:
 
 `SCHMAC_V1;<access_key>;<signature>`
 
@@ -17,7 +18,7 @@ You must have received the HMAC credentials for your property, containing the _a
 
 Please share the credentials with trusted entities only and ensure the secret is rotated or key inactivated when not in use.
 
-# Signing requests
+# Signing requests (Generating the _signature_)
 
 Each request in Matrix is generally represented as:
 
