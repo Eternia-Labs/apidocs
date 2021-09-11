@@ -14,3 +14,5 @@ Existing attendance system examples include kiosks at property entrances, thumbp
 
 *Note*: It is not recommended to send sensitive data in the above API, such as country specific person identifiers.
 A property specific identifier mapped in the integration is enough.
+
+The module name is `attendance`.
