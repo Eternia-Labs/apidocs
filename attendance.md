@@ -16,3 +16,6 @@ Existing attendance system examples include kiosks at property entrances, thumbp
 A property specific identifier mapped in the integration is enough.
 
 The module name is `attendance`.
+Latest Stable Version:
+v1
+{: .label .label-green }
