@@ -24,7 +24,7 @@ Each request in Matrix is generally represented as:
 `https://console.smartclean.io/api/<module>/<version>/actions?op=<op>&propid=<propid>&pid=<pid>&org=<org>`
 
 |Parameter |Description|
-|:-:       |:-:        |                 
+|:-        |:-:        |                 
 |op        |           |
 |propid    |           |         
 |pid       |           |  
