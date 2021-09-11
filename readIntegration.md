@@ -3,7 +3,7 @@ layout: default
 title: Read Integration
 parent: Attendance Third Party Integration
 grand_parent: SmartClean Matrix API Docs
-nav_order: 2
+nav_order: 1
 ---
 
 # **scattendance.readIntegration**
