@@ -13,7 +13,7 @@ The op `scattendance.readIntegration` returns integration details for a given in
 ## API details
 ### Input JSON
 
-```
+```json
 {
     "IntegrationId": "<The integration id>"
 }
@@ -21,7 +21,7 @@ The op `scattendance.readIntegration` returns integration details for a given in
 
 ### Output JSON
 
-```
+```json
 {
     "Org": "<org>",
     "IntegrationId": "<The integration id>",
