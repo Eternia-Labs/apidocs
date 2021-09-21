@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Update Zone
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This updates the Zone's details like Nema, Area ro Status
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -126,26 +126,6 @@ URL: /v1/actions
 
 ##### I. Example Request: Update Zone
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Requied) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.updateZone | (Required) Operation Name |
-| org | {{org}} | (Required) Operation Name |
-| pid | {{pid}} | (Required) The Project ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -210,8 +190,6 @@ URL: /v1/actions
     }
 }
 ```
-
-
 
 ##### I. Example Response: Update Zone
 ```js

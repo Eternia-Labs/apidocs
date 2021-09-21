@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Building
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a Building object for a given Property
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Acccess Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -210,8 +210,6 @@ URL: /v1/actions
     "CountryLocale": "BLR"
 }
 ```
-
-
 
 ##### I. Example Response: Create Building
 ```js

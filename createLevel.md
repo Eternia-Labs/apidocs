@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Level
-parent: Grids Level
+parent: Level
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -21,7 +21,7 @@ This creates a Level object for a given Building
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -30,9 +30,8 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Requirec) |
 
 
 
@@ -65,25 +64,6 @@ URL: /v1/actions
 ##### I. Example Request: Create Level
 
 
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createLevel | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) The Project ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -93,8 +73,6 @@ URL: /v1/actions
     "Level": "L25"
 }
 ```
-
-
 
 ##### I. Example Response: Create Level
 ```js

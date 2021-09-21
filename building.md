@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Grids Building
+title: Building
 parent: Grids
 grand_parent: SmartClean Matrix API Docs
 has_children: true

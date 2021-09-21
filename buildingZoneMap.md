@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Building to Zone Map
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,9 +22,16 @@ This lists a given Building's zone name and zone id map
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
+
+***Headers:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| Authorization | {{access_tokren}} | (Required) The Acccess Token or HMAC Signature |
+| x-sc-identity | external | (Required) |
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Zone Categories
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -23,7 +23,7 @@ This lists all the system level Zone categories for a given Property type
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -59,29 +59,6 @@ URL: /v1/actions
 
 ***More example Requests/Responses:***
 
-
-##### I. Example Request: List Zone Categories
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) THe Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listZoneCategories | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-
-
-
 ***Body:***
 
 ```js        
@@ -89,8 +66,6 @@ URL: /v1/actions
     "PropertyTypeID": "{{property_type}}"
 }
 ```
-
-
 
 ##### I. Example Response: List Zone Categories
 ```js

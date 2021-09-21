@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Zone Asset
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a Zone Unit/Asset like door or window
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -64,26 +64,6 @@ URL: /v1/actions
 
 ##### I. Example Request: Create Zone Asset
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createZoneUnit | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) The Project ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -94,8 +74,6 @@ URL: /v1/actions
     "ZoneCategoryID": "CONFERENCE_ROOMS"
 }
 ```
-
-
 
 ##### I. Example Response: Create Zone Asset
 ```js

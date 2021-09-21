@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Property
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a new Property object given an Organisation and increments the Prop
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,8 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Content-Type | application/json |  |
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -78,26 +77,6 @@ URL: /v1/actions
 ##### I. Example Request: Create Property
 
 
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Content-Type | application/json |  |
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createProperty | (Required) Operation name  |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) The pid will be scnoop it it's not known |
-
-
-
 ***Body:***
 
 ```js        
@@ -120,8 +99,6 @@ URL: /v1/actions
     "CountryLocale": "{{country_locale}}"
 }
 ```
-
-
 
 ##### I. Example Response: Create Property
 ```js

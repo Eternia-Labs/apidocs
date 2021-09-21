@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Zones by Level
-parent: Grids Level
+parent: Level
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This lists all the Zones for a given Level
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -63,25 +63,6 @@ URL: /v1/actions
 
 ##### I. Example Request: List Zones By Level
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} |  |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listZonesByLevel | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) Project ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -93,8 +74,6 @@ URL: /v1/actions
     "ESK": "{{ESK}}"
 }
 ```
-
-
 
 ##### I. Example Response: List Zones By Level
 ```js

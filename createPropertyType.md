@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Property Type
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a type of Property at the system level
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -62,26 +62,6 @@ URL: /v1/actions
 
 ##### I. Example Request: Create PropertyType
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createPropertyType | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-
-
-
 ***Body:***
 
 ```js        
@@ -90,8 +70,6 @@ URL: /v1/actions
     "TypeID": "COMMERCIAL_BUILDINGS"
 }
 ```
-
-
 
 ##### I. Example Response: Create PropertyType
 ```js

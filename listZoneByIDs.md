@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Zones by IDs
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ Op name:
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -59,21 +59,6 @@ URL: /v1/actions
 
 ***More example Requests/Responses:***
 
-
-##### I. Example Request: List Zones By IDs
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listZonesByIDs |  |
-| org | {{org}} |  |
-| pid | {{pid}} |  |
-
-
-
 ***Body:***
 
 ```js        
@@ -81,8 +66,6 @@ URL: /v1/actions
     "InsIDs": ["{{insid}}", "{{insid2}}"]
 }
 ```
-
-
 
 ##### I. Example Response: List Zones By IDs
 ```js

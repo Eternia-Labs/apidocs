@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Zone Category
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a new Zone category at system level
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -63,25 +63,6 @@ URL: /v1/actions
 
 ##### I. Example Request: Create Zone Category
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} |  |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createZoneCategory |  |
-| org | {{org}} |  |
-| pid | {{pid}} |  |
-
-
-
 ***Body:***
 
 ```js        
@@ -91,8 +72,6 @@ URL: /v1/actions
     "PropertyTypeID": "SCHOOL"
 }
 ```
-
-
 
 ##### I. Example Response: Create Zone Category
 ```js
