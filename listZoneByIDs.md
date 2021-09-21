@@ -13,7 +13,7 @@ nav_order: 1
 
 Op name: 
 
-> scgrids.listZoneByIDs
+> scgrids.listZonesByIDs
 
  This gets the details of given zones
 
@@ -110,5 +110,14 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+###### 2. Missing InsIDs in the body
+
 
 <br>

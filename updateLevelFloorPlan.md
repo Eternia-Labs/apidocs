@@ -52,3 +52,16 @@ URL: /v1/actions
 | --- | ------|-------------|
 | file |  |  |
 | LID | {{lid}} |  |
+
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 3. Missing LID in the body
+
+###### 4. Missing access_token in the header

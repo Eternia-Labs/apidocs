@@ -87,4 +87,15 @@ URL: /v1/actions
 
 ***Status Code:*** 200
 
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 2. Invalid characters/improper input body
+###### 3. If LID is missing in the body
+
 <br>

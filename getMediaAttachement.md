@@ -54,3 +54,12 @@ URL: /v1/actions
 
 }
 ```
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid

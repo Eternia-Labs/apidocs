@@ -52,3 +52,12 @@ URL: /v1/actions
     "ESK": "{{ESK}}"
 }
 ```
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op, org or pid
+###### 2. Invalid characters/improper input body

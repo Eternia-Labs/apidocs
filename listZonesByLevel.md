@@ -107,4 +107,15 @@ URL: /v1/actions
 
 ***Status Code:*** 200
 
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 3. Missing LID in the body
+
+###### 4. If the ZoneCategories filter array reached more than 10
+
 <br>

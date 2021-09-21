@@ -147,4 +147,15 @@ URL: /v1/actions
 
 ***Status Code:*** 200
 
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+###### 1. Missing op/org/pid
+
+###### 2. Missing InsID(Zone ID) in the body
+
+###### 3. If the given InsID(Zone ID) not found
+
 <br>

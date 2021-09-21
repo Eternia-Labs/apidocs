@@ -53,3 +53,18 @@ URL: /v1/actions
 | Type | excel | (Required) Supports image/video |
 | Entity | incident | (Required) Supports incident/audits |
 | File |  | (Required) File to upload |
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 4. Missing Type/Entity/File in the body
+
+###### 5. If the fileoe Image type Image exceeded 2MB
+
+###### 6. If the Type/Entity is invalid

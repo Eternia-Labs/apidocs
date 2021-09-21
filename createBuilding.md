@@ -247,4 +247,26 @@ URL: /v1/actions
 
 ***Status Code:*** 200
 
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
+
+###### 2. Invalid characters/improper input body
+
+###### 3. Missing access_token in the header
+
+###### 4. Missing Name/OperatingHours/LevelsCount/Country/CountryLocale in input body
+
+###### 5. If the LevelsCount number is greater than 60
+
+###### 6. If the building name is already taken under the given property
+
+###### 7. If the system limit of buildings has reached for the given property
+
+
 <br>

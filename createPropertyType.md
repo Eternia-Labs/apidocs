@@ -86,4 +86,20 @@ URL: /v1/actions
 
 ***Status Code:*** 201
 
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 2. Invalid characters/improper input body
+
+###### 3. Missing access_token in the header
+
+###### 4. Missing Name/TypeId in input body
+
+
 <br>
