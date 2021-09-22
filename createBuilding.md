@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Building
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a Building object for a given Property
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Acccess Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -211,8 +211,6 @@ URL: /v1/actions
 }
 ```
 
-
-
 ##### I. Example Response: Create Building
 ```js
 {
@@ -248,5 +246,27 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
+
+###### 2. Invalid characters/improper input body
+
+###### 3. Missing access_token in the header
+
+###### 4. Missing Name/OperatingHours/LevelsCount/Country/CountryLocale in input body
+
+###### 5. If the LevelsCount number is greater than 60
+
+###### 6. If the building name is already taken under the given property
+
+###### 7. If the system limit of buildings has reached for the given property
+
 
 <br>

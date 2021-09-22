@@ -1,7 +1,7 @@
 ---
 layout: default
 title: listZoneAssetByZoneCategory
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -23,7 +23,7 @@ This lists all the stayet level Zone Units/Assets
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -32,7 +32,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -59,29 +59,6 @@ URL: /v1/actions
 
 ***More example Requests/Responses:***
 
-
-##### I. Example Request: List Zone Units By Zone Category
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listZoneUnitsByZoneCategory | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) The Project ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -89,7 +66,6 @@ URL: /v1/actions
     "ZoneCategoryID": "CONFERENCE_ROOMS"
 }
 ```
-
 
 
 ##### I. Example Response: List Zone Units By Zone Category
@@ -116,5 +92,14 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+###### 2. Missing ZoneCategoryID in the body
 
 <br>

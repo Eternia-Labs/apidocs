@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Update Building
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This updates a given building's Name or Status
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -60,26 +60,6 @@ URL: /v1/actions
 
 
 ##### I. Example Request: Update Building
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.updateBuilding | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) The Project ID |
-
-
 
 ***Body:***
 
@@ -133,8 +113,6 @@ URL: /v1/actions
     }
 }
 ```
-
-
 
 ##### I. Example Response: Update Building
 ```js
@@ -220,5 +198,15 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 3. If the given Building ID is not found
 
 <br>

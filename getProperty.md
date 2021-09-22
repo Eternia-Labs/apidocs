@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Get Property
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This gets a Property by ID
 
 ```bash
 Method: POST
-Type: 
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -48,30 +48,6 @@ URL: /v1/actions
 
 
 ***More example Requests/Responses:***
-
-
-##### I. Example Request: Get Property
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} |  |
-| x-sc-identity | external  |  |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.readProperty | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-| propid | {{prop_id}} | (Required) Property ID |
-
-
 
 ##### I. Example Response: Get Property
 ```js
@@ -101,6 +77,17 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 3. If the given Property ID is not found
 
 <br>
 

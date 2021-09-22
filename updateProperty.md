@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Property
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This updates a given Property's Name or Status
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -62,27 +62,6 @@ URL: /v1/actions
 
 ##### I. Example Request: scgrids.updateProperty
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.updateProperty | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-| propid | {{prop_id}} | (Required) Property ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -90,8 +69,6 @@ URL: /v1/actions
     "Status": "Pending"
 }
 ```
-
-
 
 ##### I. Example Response: scgrids.updateProperty
 ```js
@@ -121,5 +98,12 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
 
 <br>

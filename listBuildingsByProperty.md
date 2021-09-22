@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Buildings By Property
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -21,7 +21,7 @@ This lists all the buildings under a given listBuildingsByProperty
 
 ```bash
 Method: POST
-Type: 
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -30,7 +30,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -47,31 +47,6 @@ URL: /v1/actions
 
 
 ***More example Requests/Responses:***
-
-
-##### I. Example Request: List Buildings By Property
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listBuildingsByProperty | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-| propid | {{prop_id}} | (Required) Property ID |
-
-
-
 ##### I. Example Response: List Buildings By Property
 ```js
 {
@@ -158,5 +133,15 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
+
+
 
 <br>

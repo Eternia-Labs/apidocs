@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Get Thumbnails
-parent: UnGrouped
+parent: Miscellaneous
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This gets the given thumbnail
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -56,3 +56,16 @@ URL: /v1/actions
     ]
 }
 ```
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
+
+###### 2. Missing URIs in the body
+
+###### 3. If the thumbnails read request reached more than 5

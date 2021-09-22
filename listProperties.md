@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Property
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,16 +22,15 @@ This lists all the Properties for an Organisation and can filter them by type of
 
 ```bash
 Method: POST
-Type: 
+Type: application/json
 URL: /v1/actions
 ```
-
 
 ***Headers:***
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -47,29 +46,6 @@ URL: /v1/actions
 
 
 ***More example Requests/Responses:***
-
-
-##### I. Example Request: List Properties
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listProperties | (Required) Operation name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-
-
 
 ##### I. Example Response: List Properties
 ```js
@@ -121,5 +97,13 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+###### 1. Missing op/org/pid
+
 
 <br>

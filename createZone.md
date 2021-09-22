@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Zone
-parent: Grids Zone
+parent: Zone
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This creates a Zone object for a given Level for a Building
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -91,27 +91,6 @@ URL: /v1/actions
 
 
 ##### I. Example Request: Create Zone
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createZone | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) Project ID |
-| propid | {{prop_id}} | (Required) Ptoperty ID |
-
-
 
 ***Body:***
 
@@ -222,8 +201,6 @@ URL: /v1/actions
     ]
 }
 ```
-
-
 
 ##### I. Example Response: Create Zone
 ```js
@@ -347,5 +324,21 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
+
+###### 2. Invalid characters/improper input body
+
+###### 3. Missing access_token in the header
+
+###### 4. If the given building is not found
+
 
 <br>

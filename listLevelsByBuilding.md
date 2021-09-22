@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Levels by Building
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -30,7 +30,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -46,29 +46,6 @@ URL: /v1/actions
 
 
 ***More example Requests/Responses:***
-
-
-##### I. Example Request: List Levels By Building
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (R)equired |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listLevelsByBuilding | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) The Project ID |
-
-
 
 ##### I. Example Response: List Levels By Building
 ```js
@@ -133,5 +110,13 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
 
 <br>

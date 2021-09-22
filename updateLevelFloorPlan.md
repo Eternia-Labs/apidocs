@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Update Level FloorPlan
-parent: Grids Level
+parent: Level
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} |  |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 
 
 
@@ -52,3 +52,16 @@ URL: /v1/actions
 | --- | ------|-------------|
 | file |  |  |
 | LID | {{lid}} |  |
+
+
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 3. Missing LID in the body
+
+###### 4. Missing access_token in the header

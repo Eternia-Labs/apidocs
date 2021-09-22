@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Get Property Collaboration
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This gets a Property to Org Collaboration object
 
 ```bash
 Method: POST
-Type: 
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -48,22 +48,6 @@ URL: /v1/actions
 
 
 ***More example Requests/Responses:***
-
-
-##### I. Example Request: Get Property Collaboration
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.readPropertyCollaboration | (Required) Operation name  |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID |
-| propid | {{prop_id}} | (Required) Property ID |
-
-
 
 ##### I. Example Response: Get Property Collaboration
 ```js
@@ -91,5 +75,14 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid/propid
 
 <br>

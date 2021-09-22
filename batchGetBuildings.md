@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Batch Get Buildings
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -21,7 +21,7 @@ nav_order: 1
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -30,7 +30,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_tokren}} | (Required) Login Access Token |
+| Authorization | {{access_tokren}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -62,18 +62,6 @@ URL: /v1/actions
 
 ##### I. Example Request: Batch Get Buildings
 
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.readBuildings |  |
-| org | {{org}} |  |
-| pid | scnoop |  |
-
-
-
 ***Body:***
 
 ```js        
@@ -83,8 +71,6 @@ URL: /v1/actions
     ]
 }
 ```
-
-
 
 ##### I. Example Response: Batch Get Buildings
 ```js
@@ -158,7 +144,20 @@ URL: /v1/actions
 }
 ```
 
-
 ***Status Code:*** 200
 
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op, org or pid
+###### 2. Invalid characters/improper input body
+
+
 <br>
+
+
+

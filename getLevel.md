@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Get Level
-parent: Grids Level
+parent: Level
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -21,7 +21,7 @@ This gets a given Level for a valid Project
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -30,7 +30,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Acces Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -61,26 +61,6 @@ URL: /v1/actions
 
 ##### I. Example Request: Get Level
 
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Acces Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.readLevel | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) The Project ID |
-
-
-
 ***Body:***
 
 ```js        
@@ -88,8 +68,6 @@ URL: /v1/actions
     "LID": "{{lid}}"
 }
 ```
-
-
 
 ##### I. Example Response: Get Level
 ```js
@@ -108,5 +86,16 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+***Error codes:***
+
+##### 400
+
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
+###### 2. Invalid characters/improper input body
+###### 3. If LID is missing in the body
 
 <br>

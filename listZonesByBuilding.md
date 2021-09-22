@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Zones by Building
-parent: Grids Building
+parent: Building
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -22,7 +22,7 @@ This lists all the Zones details for a given Building
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -57,29 +57,6 @@ URL: /v1/actions
 
 
 ***More example Requests/Responses:***
-
-
-##### I. Example Request: List Zones By Building
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Access Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listZonesByBuilding | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | {{pid}} | (Required) The Project ID |
-
-
 
 ##### I. Example Response: List Zones By Building
 ```js
@@ -158,5 +135,12 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
 
 <br>

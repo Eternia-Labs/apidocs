@@ -1,7 +1,7 @@
 ---
 layout: default
 title: List Owner Org Properties
-parent: Grids Property
+parent: Property
 grand_parent: Grids
 has_children: true
 nav_order: 1
@@ -21,7 +21,7 @@ This lists all the owner Org properties
 
 ```bash
 Method: POST
-Type: RAW
+Type: application/json
 URL: /v1/actions
 ```
 
@@ -30,7 +30,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) Login Access Token |
+| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -60,18 +60,6 @@ URL: /v1/actions
 
 ##### I. Example Request: List Owner Org Properties
 
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.listOwnerOrgProperties |  |
-| org | {{org}} |  |
-| pid | scnoop |  |
-
-
-
 ***Body:***
 
 ```js        
@@ -79,8 +67,6 @@ URL: /v1/actions
     "PropTypeID": "BANK"
 }
 ```
-
-
 
 ##### I. Example Response: List Owner Org Properties
 ```js
@@ -132,6 +118,14 @@ URL: /v1/actions
 
 
 ***Status Code:*** 200
+
+***Error codes:***
+
+##### 400
+##### Possible reasons:
+
+###### 1. Missing op/org/pid
+
 
 <br>
 
