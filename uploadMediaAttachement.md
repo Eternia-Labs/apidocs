@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Upload Media Attachement
+title: Upload Media Attachment
 parent: Miscellaneous
 grand_parent: Grids
 has_children: true
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
+| Authorization | {{access_token}} | (Required) The Access Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -65,6 +65,6 @@ URL: /v1/actions
 
 ###### 4. Missing Type/Entity/File in the body
 
-###### 5. If the fileoe Image type Image exceeded 2MB
+###### 5. If the file Image type Image exceeded 2 MB
 
 ###### 6. If the Type/Entity is invalid

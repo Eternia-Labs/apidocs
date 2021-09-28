@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
+| Authorization | {{access_token}} | (Required) The Access Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -118,6 +118,7 @@ URL: /v1/actions
 
 ###### 1. Missing op/org/pid
 ###### 2. Missing InsIDs in the body
+###### 3. If the requested Zones(InsIDs) size reached more than 10 
 
 
 <br>

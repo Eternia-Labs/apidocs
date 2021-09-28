@@ -30,7 +30,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_tokren}} | (Required) The Acccess Token or HMAC Signature |
+| Authorization | {{access_token}} | (Required) The Access Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -52,6 +52,10 @@ URL: /v1/actions
     "ESK": "{{ESK}}"
 }
 ```
+
+***Note:***
+The response may have `LEK` (Last Evaluated Key) field with a value. This indicates that data can be paginated. Just use the `LEK` value in `ESK` (Exclusive Start Key) in the request body. If the `LEK` is empty it means there is no further data to load.    
+
 
 ***Error codes:***
 

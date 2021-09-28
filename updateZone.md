@@ -15,7 +15,7 @@ Op name:
 
 > scgrids.updateZone
 
-This updates the Zone's details like Nema, Area ro Status
+This updates the Zone's details like Name, Area ro Status
 
 
 ***Endpoint:***
@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Requied) The Login Access Token |
+| Authorization | {{access_token}} | (Required) The Login Access Token |
 | x-sc-identity | external | (Required) |
 
 

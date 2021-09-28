@@ -31,7 +31,7 @@ URL: /v1/actions
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Acccess Token or HMAC Signature |
+| Authorization | {{access_token}} | (Required) The Access Token or HMAC Signature |
 | x-sc-identity | external | (Required) |
 
 
@@ -117,27 +117,6 @@ URL: /v1/actions
 
 
 ##### I. Example Request: Create Building
-
-
-***Headers:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| Authorization | {{access_token}} | (Required) The Login Acccess Token |
-| x-sc-identity | external | (Required) |
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| op | scgrids.createBuilding | (Required) Operation Name |
-| org | {{org}} | (Required) Organisation ID |
-| pid | scnoop | (Required) Project ID is scnoop when it's not known |
-| propid | {{prop_id}} | (Required) Property ID |
-
-
 
 ***Body:***
 
