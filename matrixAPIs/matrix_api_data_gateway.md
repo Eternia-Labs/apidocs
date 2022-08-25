@@ -13,6 +13,13 @@ Obtain the actual details and update the details below)
 ### Matrix Realtime data gateway API
 This API allows you to enable access to realtime data.
 
+Operations available in this API:
+1. `datagateway.Connect`:
+   1. Allows you to connect to the data gateway endpoints offered by Matrix. 
+   2. Currently, only available for region: Asia/Singapore (SIN)
+2. `datagateway.publishRequest`:
+   1. Allows you to submit a request to publish your payloads.
+
 Request Path:
 
 > apis.smartclean.rtdatagateway
