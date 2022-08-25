@@ -31,7 +31,7 @@ URL: /v1/actions
 | Key | Value | Description |
 | --- | ------|-------------|
 | Authorization | {{access_token}} | (Required) The Access Token or HMAC Signature |
-| x-sc-identity | external | (Required) |
+| x-sc-auth | external | (Optional) |
 
 
 ***Body:***
