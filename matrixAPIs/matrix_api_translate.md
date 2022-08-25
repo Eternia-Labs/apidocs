@@ -3,7 +3,7 @@ layout: default
 title: Translate API
 parent: Matrix API offerings
 grand_parent: SmartClean Matrix API Docs
-has_children: true
+has_children: false
 nav_order: 1
 ---
 
