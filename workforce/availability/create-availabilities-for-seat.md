@@ -30,7 +30,6 @@ Basic authorization:
 |Key|Value|
 |---|---|
 |Authorization|<<access_token>>|
-|x-sc-identity|external|
 
 HMAC based authorization:
 
