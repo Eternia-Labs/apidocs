@@ -8,13 +8,13 @@ nav_order: 1
 ---
 
 
-### Add Task To Shift
+### Create Incident
 
-Add Task To Shift
+Create Incident (Assigned Incidents)
 
 ***Operation name:***
 
-> scteams.addTaskgroupToShift
+> scteams.createIncident
 
 ***Endpoint:***
 
@@ -49,7 +49,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.addTaskgroupToShift | (Required) Operation Name |
+| op | scteams.createIncident | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |

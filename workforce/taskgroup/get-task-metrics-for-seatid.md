@@ -8,13 +8,13 @@ nav_order: 1
 ---
 
 
-### Add Task To Shift
+### Get Task Metric For Seat
 
-Add Task To Shift
+Get Task Metric For Seat
 
 ***Operation name:***
 
-> scteams.addTaskgroupToShift
+> scteams.getTaskGrouptMetricsForSeatID
 
 ***Endpoint:***
 
@@ -49,7 +49,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.addTaskgroupToShift | (Required) Operation Name |
+| op | scteams.getTaskGrouptMetricsForSeatID | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |

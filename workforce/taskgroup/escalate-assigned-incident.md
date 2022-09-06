@@ -8,13 +8,13 @@ nav_order: 1
 ---
 
 
-### Add Task To Shift
+### Escalate Assigned Incident
 
-Add Task To Shift
+Escalate Assigned Incident
 
 ***Operation name:***
 
-> scteams.addTaskgroupToShift
+> scteams.escalateIncidentStatusForType
 
 ***Endpoint:***
 
@@ -49,7 +49,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.addTaskgroupToShift | (Required) Operation Name |
+| op | scteams.escalateIncidentStatusForType | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |
