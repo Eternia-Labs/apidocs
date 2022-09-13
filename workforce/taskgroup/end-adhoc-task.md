@@ -8,13 +8,13 @@ nav_order: 1
 ---
 
 
-### Add Task To Shift
+### End Ad-Hoc Task
 
-Add Task To Shift
+End Ad-Hoc Task
 
 ***Operation name:***
 
-> scteams.addTaskgroupToShift
+> scteams.endAdhocTask
 
 ***Endpoint:***
 
@@ -31,7 +31,7 @@ Basic authorization:
 |Key|Value|
 |---|---|
 |Authorization|<<access_token>>|
-|x-sc-identity|external|
+
 
 HMAC based authorization:
 
@@ -49,7 +49,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.addTaskgroupToShift | (Required) Operation Name |
+| op | scteams.endAdhocTask | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |

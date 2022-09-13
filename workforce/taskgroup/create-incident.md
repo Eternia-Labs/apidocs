@@ -8,13 +8,13 @@ nav_order: 1
 ---
 
 
-### Add Task To Shift
+### Create Incident
 
-Add Task To Shift
+Create Incident (Assigned Incidents) to report an Incident in published state to a given Shift or Seat. An incident can be reported to a published Shift or even to a Seat directly(in which case the ShiftId is same as the SeatId).
 
 ***Operation name:***
 
-> scteams.addTaskgroupToShift
+> scteams.createIncident
 
 ***Endpoint:***
 
@@ -31,7 +31,7 @@ Basic authorization:
 |Key|Value|
 |---|---|
 |Authorization|<<access_token>>|
-|x-sc-identity|external|
+
 
 HMAC based authorization:
 
@@ -49,7 +49,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.addTaskgroupToShift | (Required) Operation Name |
+| op | scteams.createIncident | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |
@@ -57,11 +57,39 @@ Federated Token based authorization:
 
 ***Request Body:***
 
+### when reporting an Incident to a published Shift
+
 ```
 {
     "Taskgroup": {
         "SeatId": "3b749a681d14446292b6c79b48403bbd_007",
         "ShiftId": "d4ca22ec-900d-4e7a-86ce-96144b7205e5",
+        "EventSource": "Sensors",
+        "Start": 1660432080,
+        "End": 1660430080,
+        "PropID": "SONY",
+        "Tasks": [
+            {
+                "Name": "Clean floor."
+            },
+            {
+                "Name": "Mop floor"
+            }
+        ],
+        "ZoneName": "Zone name",
+        "ZoneCatId": "MEETING_ROOMS",
+        "Zone": "71d899661d5645acb0b8f8030e26fc35"
+    }
+}
+```
+
+### when reporting an Incident to a SeatId
+
+```
+{
+    "Taskgroup": {
+        "SeatId": "3b749a681d14446292b6c79b48403bbd_007",
+        "ShiftId": "3b749a681d14446292b6c79b48403bbd_007",
         "EventSource": "Sensors",
         "Start": 1660432080,
         "End": 1660430080,
