@@ -52,7 +52,6 @@ The final value to be sent in _Authorization_ header is then:
 Along with additional headers:
 
 |x-sc-time        |1631346630      |
-|x-sc-identity    |apiuser         |
 
 Note that the server allows a maximum clock skew of *300s* (5 minutes).
 
