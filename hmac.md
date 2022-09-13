@@ -22,7 +22,7 @@ Please share the credentials with trusted entities only and ensure the secret is
 
 Each request in Matrix is generally represented as:
 
-`https://console.smartclean.io/api/<module>/<version>/actions?op=<op>&propid=<propid>&pid=<pid>&org=<org>`
+`https://console.smartclean.io/prod/v2/<module>/<version>/actions?op=<op>&propid=<propid>&pid=<pid>&org=<org>`
 
 |Parameter |Description                                                    |
 |:- 	   |:-  	                                                       |
