@@ -65,6 +65,9 @@ Federated Token based authorization:
 }
 ```
 
+> Note: ShiftID equals to SeatId is a special case when the incident is directly assigned to the Seat. ShiftID/SeatId are not same for regular scheduled activities.
+
+
 |Key|Value|
 |---|---|
 |SeatId|seat id to which the incident is being assigned|
