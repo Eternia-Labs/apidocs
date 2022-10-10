@@ -13,7 +13,7 @@ Reassign Incident.
 
 ***Operation name:***
 
-> scteams.startUnassignedIncident
+> scteams.adminReassignIncident
 
 ***Endpoint:***
 
@@ -48,7 +48,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.startUnassignedIncident | (Required) Operation Name |
+| op | scteams.adminReassignIncident | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |
