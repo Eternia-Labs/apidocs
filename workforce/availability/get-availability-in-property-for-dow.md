@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Assign Open Incident
-parent: Incident
+title: Get Availabilities In Property For Day-Of-Week
+parent: Availability
 grand_parent: Workforce
 has_children: true
 nav_order: 1
 ---
 
-### Assign Open Incident
+### Get Availabilities In Property For Day-Of-Week
 
-Assign Open Incident.
+get availabilities in the entire property for a given day of week.
 
 ***Operation name:***
 
-> scteams.assignIncident
+> scteams.getAvailabilityInPropertyForDow
 
 ***Endpoint:***
 
@@ -48,29 +48,19 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.assignIncident | (Required) Operation Name |
+| op | scteams.getAvailabilityInPropertyForDow | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |
-
 
 ***Request Body:***
 
 ```
 {
-    "SeatId":"3b749a681d14446292b6c79b48403bbd_007",
-    "ShiftID":"3b749a681d14446292b6c79b48403bbd_007",
-    "zoneId":"zoneid99",
-    "IncidentID":"1660643173874880217"
+    "DayOfWeek": 6
 }
 ```
 
-> Note: ShiftID equals to SeatId is a special case when the incident is directly assigned to the Seat. ShiftID/SeatId are not same for regular scheduled activities.
-
-
-|Key|Value|
-|---|---|
-|SeatId|seat id to which the incident is being assigned|
-|ShiftID|shift id to which the incident is being assigned|
-|zoneId|incident zone id|
-|IncidentId| incident id|
+| Key | Value | Description |
+| --- | ------|-------------|
+|DayOfWeek|nth day of the week (Sunday(0); Saturday(6))|

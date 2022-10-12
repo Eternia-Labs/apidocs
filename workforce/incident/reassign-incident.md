@@ -13,7 +13,7 @@ Reassign Incident.
 
 ***Operation name:***
 
-> scteams.startUnassignedIncident
+> scteams.adminReassignIncident
 
 ***Endpoint:***
 
@@ -48,7 +48,7 @@ Federated Token based authorization:
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| op | scteams.startUnassignedIncident | (Required) Operation Name |
+| op | scteams.adminReassignIncident | (Required) Operation Name |
 | org | <<org>> | (Required) Organisation ID |
 | pid | <<pid>> | (Required) Project OR building ID |
 | propid | <<prop_id>> | (Required) Property ID |
@@ -70,6 +70,8 @@ Federated Token based authorization:
 }
 ```
 
+> Note: ShiftID/NewShiftId equals to SeatId/NewSeatId is a special case when the incident is directly assigned to the Seat. ShiftID/SeatId & NewShiftId/NewSeatId are not same for regular scheduled activities.
+
 ### Reassign from PUBLISHED/COMPLETED/INCOMPLETE to OPEN
 
 ```
@@ -81,6 +83,9 @@ Federated Token based authorization:
     "SeatId":"3b749a681d14446292b6c79b48403bbd_007"
 }
 ```
+
+> Note: ShiftID equals to SeatId is a special case when the incident is directly assigned to the Seat. ShiftID/SeatId is not same for regular scheduled activities.
+
 
 | Key | Description |
 | --- |-------------|
