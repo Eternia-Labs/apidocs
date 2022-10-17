@@ -41,8 +41,8 @@ Where,
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| `Authorization` | Your SmartClean Access Token | (Required) Basic Auth / Access Token / SC-HMAC-V4 Signature (based on authentication type)|
-| `x-sc-auth` | Your SmartClean Application ID | (Optional) If you have registered your application with us for federated access|
+| `Authorization` | (Required) Your SmartClean Access Token | Basic Auth / Access Token / SC-HMAC-V4 Signature (based on authentication type)|
+| `x-sc-auth` | (Optional) Your SmartClean Application ID | If you have registered your application with us for federated access|
 
 ### Body:
 ```json
