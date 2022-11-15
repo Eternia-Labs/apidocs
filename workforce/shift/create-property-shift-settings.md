@@ -9,7 +9,7 @@ nav_order: 1
 
 ### Create Property Shift Settings
 
-Create Property Shift Settings
+Create Property Shift Settings defines Shift definition for a given property on a given day of the week. A property can be configured to have different Shift schedules for different days of the week. Each Shift schedule is independent of the other and hence the time span of one shift schedule can overlap with the other.
 
 ***Operation name:***
 

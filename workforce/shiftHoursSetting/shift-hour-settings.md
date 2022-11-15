@@ -8,7 +8,7 @@ nav_order: 2
 ---
 
 # ShiftHour Setting
-ShiftHour object defines shifts for a given property within a span of 24 hours(not necessarily in the same day).
+ShiftHour object defines shifts for a given property within a span of 24 hours(not necessarily in the same day).  Shift hours are default shift definitions which are pre-configured for each day of the week(check operation: **scteams.createShiftDefinitionForProperty**). Each Shift hour object is defined independent of the other and hence their time span can overlap.
 
 A ShiftHour object schema looks like this :-
 
