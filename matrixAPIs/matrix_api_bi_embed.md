@@ -43,6 +43,7 @@ Where,
 | --- | ------|-------------|
 | `Authorization` | (Required) Your SmartClean Access Token | Basic Auth / Access Token / SC-HMAC-V4 Signature (based on authentication type)|
 | `x-sc-auth` | (Optional) Your SmartClean Application ID | If you have registered your application with us for federated access|
+| `x-api-key` | (Required) The API key you have received | An API key is required for most API in Matrix for appropriate rate-limiting quotas to be applied.|
 
 ### Body:
 ```json
